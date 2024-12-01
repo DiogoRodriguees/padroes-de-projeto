@@ -1,18 +1,20 @@
 package main
 
 import (
-	"observer/infra"
+	"observer/infra/observers"
+	"observer/infra/subjects"
 )
 
 func main() {
-	observer1 := &infra.Observer{ID: 1}
-	observer2 := &infra.Observer{ID: 2}
-	observer3 := &infra.Observer{ID: 3}
+	observer1 := observers.New(1, []string{"Esportes", "Noticias"})
+	observer2 := observers.New(2, []string{"Noticias"})
+	observer3 := observers.New(3, []string{"Esportes"})
 
-	subject1 := infra.NewSubject()
-	subject1.Subscribe(observer1)
-	subject1.Subscribe(observer2)
-	subject1.Subscribe(observer3)
-	subject1.NotifyAll()
-	subject1.Notify(observer3)
+	subject := subjects.New()
+	subject.Subscribe(observer1)
+	subject.Subscribe(observer2)
+	subject.Subscribe(observer3)
+	subject.NotifyAll()                  // Notifica todos os observers (1, 2 e 3)
+	subject.NotifyByInterest("Esportes") // Notifica observer com id 1 e 3
+	subject.NotifyByInterest("Noticias") // Notifica observer com id 1 e 2
 }

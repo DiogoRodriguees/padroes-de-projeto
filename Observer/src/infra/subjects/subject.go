@@ -1,7 +1,7 @@
-package infra
+package subjects
 
 import (
-	"fmt"
+	"log"
 	"observer/interfaces"
 )
 
@@ -9,7 +9,7 @@ type Subject struct {
 	Observers []interfaces.IObserver
 }
 
-func NewSubject() *Subject {
+func New() *Subject {
 	return &Subject{
 		Observers: []interfaces.IObserver{},
 	}
@@ -32,13 +32,32 @@ func (s *Subject) UnSubscribeALl() {
 }
 
 func (s *Subject) Notify(obs interfaces.IObserver) {
-	fmt.Println("Notifying observer ", obs.GetID())
+	log.Println("Notifying observer ", obs.GetID())
 	obs.Update()
 
 }
 
 func (s *Subject) NotifyAll() {
+	log.Println("Notifying all observers")
 	for _, obs := range s.Observers {
 		s.Notify(obs)
+	}
+}
+
+func contains(slice []string, str string) bool {
+	for _, v := range slice {
+		if v == str {
+			return true
+		}
+	}
+	return false
+}
+
+func (s *Subject) NotifyByInterest(interesse string) {
+	log.Println("Notifying all observers with interest in ", interesse)
+	for _, obs := range s.Observers {
+		if contains(obs.GetInterest(), interesse) {
+			s.Notify(obs)
+		}
 	}
 }
