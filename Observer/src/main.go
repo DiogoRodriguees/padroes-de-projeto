@@ -4,19 +4,6 @@ import (
 	"observer/infra"
 )
 
-type IObserver interface {
-	Update()
-	GetID() int
-}
-
-type ISubject interface {
-	Subscribe()
-	UnSubscribe()
-	UnSubscribeALl()
-	Notify()
-	NotifyAll()
-}
-
 func main() {
 	observer1 := &infra.Observer{ID: 1}
 	observer2 := &infra.Observer{ID: 2}
