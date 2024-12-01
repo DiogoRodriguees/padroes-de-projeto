@@ -5,6 +5,6 @@ Neste repositório serão abordados os padrões: Decorator, Observer e Strategy.
 
 ## Patterns
 
-    - [Observer]()
-    - [Decorator]()
-    - [Strategy]()
+-   [Observer]()
+-   [Decorator]()
+-   [Strategy]()
