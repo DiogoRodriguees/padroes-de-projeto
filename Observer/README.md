@@ -22,6 +22,20 @@ Também conhecido como Publish Subscribe, o observer pattern consiste em estabel
 
 **Dependências ocultas:** O padrão pode introduzir dependências implícitas entre os objetos, tornando o sistema mais difícil de entender e modificar.
 
+## Como executar o exemplo
+
+Dependencias `go version go1.23.3`
+
+No terminal:
+
+```bash
+# Entre no diretorio com o codigo fonte
+$ cd src
+
+# Execute o programa
+$ go run main.go
+```
+
 ## Referencias
 
 -   [Canal Codigo Fonte](https://www.youtube.com/watch?v=ioYkXh8NhKc)
