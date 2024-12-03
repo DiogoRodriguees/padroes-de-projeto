@@ -4,6 +4,13 @@ O Strategy é um padrão de projeto comportamental que permite que você defina 
 
 O padrão Strategy é muito comum no código Java e pode ser usado em situações em que o seu código terá muitas variações de algoritmo e condições, gerando uma corrente de IFs.
 
+## Diagrama de Exemplo
+
+<p align="center">
+  <img src="Diagrama.png" alt="Meu Logo" width="900">
+</p>
+
+
 ## Como implementar 
 
 1) Na classe contexto, identifique um algoritmo que é sujeito a frequentes mudanças. Pode ser também uma condicional enorme que seleciona e executa uma variante do mesmo algoritmo durante a execução do programa.
