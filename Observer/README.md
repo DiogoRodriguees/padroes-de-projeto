@@ -1,10 +1,3 @@
--   [x] O conceito do padrão;
--   [ ] Problema que ele resolve;
--   [x] Quando usar o padrão;
--   [ ] Um diagrama UML que represente o conceito do padrão;
--   [x] Um exemplo de código-fonte com comentários explicativos;
--   [x] Vantagens e desvantagens.
-
 ## Observer Pattern - Conceito
 
 Também conhecido como Publish Subscribe, o observer pattern consiste em estabelecer um padrão de comunicação entre objetos, de maneira que um objeto esteja ciente de alterações em outro objeto. Uma outra maneira de explicar, seria olhar para o observer como uma relação um pra muitos, onde um objeto notifica para todos os seus dependentes que ele sofreu uma mudança. Redes sociais são um bom exemplo de aplicação, onde os usuários podem demostrar interesse em algum conteudo, e quando a fonte desse conteudo sofrer alguma alteração (Novas postagens), os usuarios interessados serão notificados.
