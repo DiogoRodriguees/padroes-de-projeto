@@ -53,3 +53,4 @@ $ go run main.go
 
 -   [Canal Codigo Fonte](https://www.youtube.com/watch?v=ioYkXh8NhKc)
 -   [Refactoring Guru](https://refactoring.guru/design-patterns/observer)
+-   [GO Example](https://refactoring.guru/design-patterns/observer/go/example)
