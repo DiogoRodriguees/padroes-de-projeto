@@ -1,6 +1,26 @@
-## Observer Pattern
+-   [x] O conceito do padrão;
+-   [ ] Problema que ele resolve;
+-   [x] Quando usar o padrão;
+-   [ ] Um diagrama UML que represente o conceito do padrão;
+-   [x] Um exemplo de código-fonte com comentários explicativos;
+-   [x] Vantagens e desvantagens.
+
+## Observer Pattern - Conceito
 
 Também conhecido como Publish Subscribe, o observer pattern consiste em estabelecer um padrão de comunicação entre objetos, de maneira que um objeto esteja ciente de alterações em outro objeto. Uma outra maneira de explicar, seria olhar para o observer como uma relação um pra muitos, onde um objeto notifica para todos os seus dependentes que ele sofreu uma mudança. Redes sociais são um bom exemplo de aplicação, onde os usuários podem demostrar interesse em algum conteudo, e quando a fonte desse conteudo sofrer alguma alteração (Novas postagens), os usuarios interessados serão notificados.
+
+## Que problema o observer resolve
+
+Imagine que um cliente precise ficar visitando a loja para saber se determinado produto esta disponivel, isso geraria muitas viajens desnecessarias. Por outro lado se a loja notificar todos os clientes, sempre que um novo produto chegar, muitos deles não vao gostar de receber emails que não tem relevância pra eles. Sendo assim, o Observer
+Pattern tem o objetivo de enviar atualizações apenas para objetos que se inscreveram como interessados.
+
+## UML
+
+![uml](./images/uml.png)
+
+## Quando usar
+
+O observer (PPublish, Subscribe) é muito util uma parte do sistema emite informações que podem ser de interesse para outras partes do sistema. Nesse casso, quem emite a mensagem, faz isso uma unica vez, independente de quantos interessados existem, enquanto isso, cada parte so sistema pode se inscrever pra receber o conteudo emitido.
 
 ## Vantagens
 
