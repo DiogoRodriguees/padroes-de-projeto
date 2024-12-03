@@ -1,6 +1,6 @@
 package interfaces
 
-type IObserver interface {
+type ISubscriber interface {
 	Update()
 	GetID() int
 	GetInterest() []string

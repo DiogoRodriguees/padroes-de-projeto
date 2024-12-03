@@ -1,20 +1,20 @@
 package main
 
 import (
-	"observer/infra/observers"
-	"observer/infra/subjects"
+	"observer/infra/publishers"
+	"observer/infra/subscribers"
 )
 
 func main() {
-	observer1 := observers.New(1, []string{"Esportes", "Noticias"})
-	observer2 := observers.New(2, []string{"Noticias"})
-	observer3 := observers.New(3, []string{"Esportes"})
+	subscriber1 := subscribers.New(1, []string{"Esportes", "Noticias"})
+	subscriber2 := subscribers.New(2, []string{"Noticias"})
+	subscriber3 := subscribers.New(3, []string{"Esportes"})
 
-	subject := subjects.New()
-	subject.Subscribe(observer1)
-	subject.Subscribe(observer2)
-	subject.Subscribe(observer3)
-	subject.NotifyAll()                  // Notifica todos os observers (1, 2 e 3)
-	subject.NotifyByInterest("Esportes") // Notifica observer com id 1 e 3
-	subject.NotifyByInterest("Noticias") // Notifica observer com id 1 e 2
+	publisher := publishers.New()
+	publisher.Subscribe(subscriber1)
+	publisher.Subscribe(subscriber2)
+	publisher.Subscribe(subscriber3)
+	publisher.NotifyAll()                  // Notifica todos os observers (1, 2 e 3)
+	publisher.NotifyByInterest("Esportes") // Notifica assinante com id 1 e 3
+	publisher.NotifyByInterest("Noticias") // Notifica assinante com id 1 e 2
 }

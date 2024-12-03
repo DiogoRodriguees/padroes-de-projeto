@@ -1,25 +1,25 @@
-package subjects
+package publishers
 
 import (
 	"log"
 	"observer/interfaces"
 )
 
-type Subject struct {
-	Observers []interfaces.IObserver
+type Publisher struct {
+	Observers []interfaces.ISubscriber
 }
 
-func New() *Subject {
-	return &Subject{
-		Observers: []interfaces.IObserver{},
+func New() *Publisher {
+	return &Publisher{
+		Observers: []interfaces.ISubscriber{},
 	}
 }
 
-func (s *Subject) Subscribe(obs interfaces.IObserver) {
+func (s *Publisher) Subscribe(obs interfaces.ISubscriber) {
 	s.Observers = append(s.Observers, obs)
 }
 
-func (s *Subject) UnSubscribe(obs interfaces.IObserver) {
+func (s *Publisher) UnSubscribe(obs interfaces.ISubscriber) {
 	for i, v := range s.Observers {
 		if v == obs {
 			s.Observers = append(s.Observers[:i], s.Observers[i+1:]...)
@@ -27,17 +27,16 @@ func (s *Subject) UnSubscribe(obs interfaces.IObserver) {
 	}
 }
 
-func (s *Subject) UnSubscribeALl() {
-	s.Observers = []interfaces.IObserver{}
+func (s *Publisher) UnSubscribeALl() {
+	s.Observers = []interfaces.ISubscriber{}
 }
 
-func (s *Subject) Notify(obs interfaces.IObserver) {
+func (s *Publisher) Notify(obs interfaces.ISubscriber) {
 	log.Println("Notifying observer ", obs.GetID())
 	obs.Update()
-
 }
 
-func (s *Subject) NotifyAll() {
+func (s *Publisher) NotifyAll() {
 	log.Println("Notifying all observers")
 	for _, obs := range s.Observers {
 		s.Notify(obs)
@@ -53,7 +52,7 @@ func contains(slice []string, str string) bool {
 	return false
 }
 
-func (s *Subject) NotifyByInterest(interesse string) {
+func (s *Publisher) NotifyByInterest(interesse string) {
 	log.Println("Notifying all observers with interest in ", interesse)
 	for _, obs := range s.Observers {
 		if contains(obs.GetInterest(), interesse) {

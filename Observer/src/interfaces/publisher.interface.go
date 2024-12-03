@@ -1,6 +1,6 @@
 package interfaces
 
-type ISubject interface {
+type IPublisher interface {
 	Subscribe()
 	UnSubscribe()
 	UnSubscribeALl()
