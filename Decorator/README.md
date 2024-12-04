@@ -22,3 +22,14 @@ O padrão Decorator usa a herança apenas para ter uma correspondência de tipo 
 - É difícil remover um invólucro de uma pilha de invólucros.
 - É difícil implementar um decorador de tal maneira que seu comportamento não dependa da ordem do pilha de decoradores.
 - A configuração inicial do código de camadas pode ficar bastante feia.
+
+## Diagrama de Exemplo
+
+![Diagrama de exemplo 1](img/img_decorator.gif)
+
+![Diagrama de exemplo 1](img/notifier.png)
+
+## Referências 
+[Devmedia](https://www.devmedia.com.br/padrao-de-projeto-decorator-em-java/26238)
+[Linkedin](https://www.linkedin.com/pulse/domine-objetos-com-o-decorator-pattern-flexibilidade-e-luciano-rocha-bdwzf/)
+[Macaratti](https://www.macoratti.net/13/02/net_decor1.htm)
