@@ -12,3 +12,8 @@ Você pode contribuir para o repositório seguindo os passos descritos no arquiv
 -   [Observer](./Observer/README.md)
 -   [Decorator](./Decorator/README.md)
 -   [Strategy](./Strategy/README.md)
+
+## Colaboradores
+- [Diogo Rodrigues](https://github.com/DiogoRodriguees)
+- [João Vitor Girotto](https://github.com/Joao-Girotto)
+- [Bruno Masayuki Guskuma ](https://github.com/MasayukiBG)
