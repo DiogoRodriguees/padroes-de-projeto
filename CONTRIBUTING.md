@@ -31,7 +31,4 @@ Dentro da pasta do padrão escolhido, descreva sobre o padrão no arquivo readme
 
 Dentro do diretorio do seu padrão, crie um diretório `src` contendo o código de exemplo na linguagem de sua escolha. Crie uma branch a partir da main para iniciar a implementação e quando finalizada, abra um pull request e marque outro colaborador.
 
-## Colaboradores
-- [Diogo Rodrigues](https://github.com/DiogoRodriguees)
-- [João Vitor Girotto](https://github.com/Joao-Girotto)
-- [Bruno Masayuki Guskuma ](https://github.com/MasayukiBG)
+
